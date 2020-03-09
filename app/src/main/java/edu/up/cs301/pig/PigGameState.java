@@ -10,6 +10,7 @@ public class PigGameState extends GameState {
     private int p1Score;
     private int total;
     private int dieVal;
+    private int playerCount = 2;
 
     public PigGameState() {
 
@@ -21,35 +22,45 @@ public class PigGameState extends GameState {
         total = stateToCopy.getTotal();
         dieVal = stateToCopy.getDieVal();
     }
+
     public int getPlayerID(){
         return playerID;
     }
+
     public int getP0Score(){
         return p0Score;
     }
+
     public int getP1Score(){
         return p1Score;
     }
+
     public int getTotal(){
         return total;
     }
     public int getDieVal(){
         return dieVal;
     }
-    public void setPlayerID(){
+    public void setPlayerID(int playerID){
         this.playerID = playerID;
     }
-    public void setP0Score(){
+    public void setP0Score(int p0Score){
         this.p0Score = p0Score;
     }
-    public void setP1Score(){
+    public void setP1Score(int p1Score){
         this.p1Score = p1Score;
     }
-    public void setTotal(){
+    public void setTotal(int total){
         this.total = total;
     }
-    public void setDieVal(){
+    public void setDieVal(int dieVal){
         this.dieVal = dieVal;
+    }
+    public int getPlayerCount(){
+        return playerCount;
+    }
+    public void setPlayerCount(int playerCount){
+        this.playerCount = playerCount;
     }
 
 }

@@ -42,7 +42,10 @@ public class PigMainActivity extends GameMainActivity {
             public GamePlayer createPlayer(String name) {
                 return new PigComputerPlayer(name);
             }});
-
+        playerTypes.add(new GamePlayerType("Smart Player") {
+            public GamePlayer createPlayer(String name) {
+                return new SmartPig(name);
+            }});
         // Create a game configuration class for Pig:
         GameConfig defaultConfig = new GameConfig(playerTypes, 1, 2, "Pig", PORT_NUMBER);
         defaultConfig.addPlayer("Human", 0); // player 1: a human player

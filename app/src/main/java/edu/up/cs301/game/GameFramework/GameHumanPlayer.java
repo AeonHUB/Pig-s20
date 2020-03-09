@@ -16,6 +16,7 @@ import edu.up.cs301.game.R;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
@@ -139,11 +140,9 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
      * Flashes the background of the GUI--typically indicating that some kind
      * of error occurred. Caveat: if multiple flash calls overlap, the prior one
      * will take precedence.
-     *
      * @param color
      * 			the color to flash
      * @param duration
-     * 			the number of milliseconds the flash should last
      */
     protected void flash(int color, int duration) {
         // get the top view, ignoring if null
